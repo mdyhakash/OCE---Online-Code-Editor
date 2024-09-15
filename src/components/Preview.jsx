@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
-//
+
 import { DataContext } from "../context/DataProvider";
 const PreviewContainer = styled(Box)`
   height: 41vh;
@@ -26,7 +26,9 @@ const Preview = () => {
     return () => clearTimeout(timeout);
   }, [html, css, js]);
   return (
-    <PreviewContainer style={html || css || js ? null : {background: '#444857' }}>
+    <PreviewContainer
+      style={html || css || js ? null : { background: "#444857" }}
+    >
       <iframe
         srcDoc={src}
         title="Output"
