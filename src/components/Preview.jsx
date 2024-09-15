@@ -26,9 +26,7 @@ const Preview = () => {
     return () => clearTimeout(timeout);
   }, [html, css, js]);
   return (
-    <PreviewContainer
-      style={html || css || js ? null : { background: "#444857" }}
-    >
+    <PreviewContainer>
       <iframe
         srcDoc={src}
         title="Output"
